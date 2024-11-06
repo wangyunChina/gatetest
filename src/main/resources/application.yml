@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: cloud
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: route1
+              uri: http://127.0.0.1:8081 #codeserver address
+              predicates:
+                - Path=/code
+server:
+  port: 8080
